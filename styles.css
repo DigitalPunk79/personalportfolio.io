@@ -22,9 +22,9 @@
 
 
 
-/* dark and light themes */
+/* dark and light themes  */
 
-/*.dark { 
+/* .dark {  
   --font-color1: rgb(255, 136, 0);
   --font-color2: rgba(255, 255, 255, 0.839);
   --background-color1: rgb(40, 40, 40);
@@ -33,17 +33,17 @@
 .light { 
   --font-color1: rgb(255, 136, 0);
   --font-color3: rgb(40, 40, 40);
-  --background-color2: rgba(255, 255, 255, 0.839);
-}
+   --background-color2: rgba(255, 255, 255, 0.839); 
+  }  */
 
 /* global content */
 
 
 body {
-  /* background-color: var(--background-color1);    */
+  background-color: var(--background-color1);    
   font-size: 1.25rem;
   font-family: 'Roboto Condensed';
-  /* color: var(--font-color2);  */
+  color: var(--font-color2);  
 }
 
 .toggle {
@@ -262,9 +262,9 @@ body {
   }
 
   .quote {
-    /* border: 1px solid var(--background-color1); */
+    border: 1px solid var(--background-color1); 
     border-radius: 10px;
-    /* background-color: var(--background-color1); */
+    background-color: var(--background-color1); 
     color: var(--font-color1);
     margin-left: 50px;
     margin-right: 50px;
