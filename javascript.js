@@ -1,32 +1,32 @@
+var counterContainer = document.querySelector(".website-counter");
 document.addEventListener("DOMContentLoaded", function () {
-    const modeBtn = document.getElementById('switch');
+    var counterContainer = document.querySelector(".website-counter");
 
-    // on first render, 
-    modeBtn.onchange = (e) => {
-        if (modeBtn.checked === true) {
-            document.documentElement.classList.remove("dark")
-            document.documentElement.classList.add("light")
-            window.localStorage.setItem('mode', 'light')
-        } else {
-            document.documentElement.classList.remove("light")
-            document.documentElement.classList.add("dark")
-            window.localStorage.setItem('mode', 'dark')
+var visitCount = localStorage.getItem("page_view");
+    var visitCount = localStorage.getItem("page_view");
 
-        }
+visitCount = 1;
+    if (!visitCount) {
+        visitCount = 1
+    } else {
+        visitCount = Number(visitCount) + 1
     };
+    //Add entry for key="page_view"
+    localStorage.setItem("page_view", visitCount);
 
-    const mode = window.localStorage.getItem('mode');
-    if (!mode) {
-        console.log('inside')
-        document.documentElement.classList.add("dark")
-    } else if (mode == 'dark') {
-        modeBtn.checked = false;
-        document.documentElement.classList.remove("light")
-        document.documentElement.classList.add("dark")
-    } else if (mode == 'light') {
-        modeBtn.checked = true;
-        document.documentElement.classList.remove("dark")
-        document.documentElement.classList.add("light")
-    }
-}); 
+//Add entry for key="page_view"
+localStorage.setItem("page_view", 1);
+
+visitCount = Number(visitCount) + 1;
+
+// Update local storage value
+localStorage.setItem("page_view", visitCount);
+
+counterContainer.innerHTML = visitCount;
+
+    // // Update local storage value
+    // localStorage.setItem("page_view", visitCount);
+
+    counterContainer.innerHTML = visitCount;
+});
 
