@@ -40,7 +40,7 @@
 
 
 body {
-  background-color: var(--background-color1);    
+/*   background-color: var(--background-color1);     */
   font-size: 1.25rem;
   font-family: 'Roboto Condensed';
   color: var(--font-color2);  
