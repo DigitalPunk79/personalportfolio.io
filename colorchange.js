@@ -1,7 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const modeBtn = document.getElementById('switch');
 
-const modeBtn = document.getElementById('switch');
 
 
+// on first render, 
 modeBtn.onchange = (e) => {
     if (modeBtn.checked === true) {
         document.documentElement.classList.remove("dark")
@@ -13,18 +15,20 @@ modeBtn.onchange = (e) => {
         window.localStorage.setItem('mode', 'dark')
 
     }
+
 };
 
 const mode = window.localStorage.getItem('mode');
-
-if (mode == 'dark') {
+if (!mode) {
+    console.log('inside')
+    document.documentElement.classList.add("dark")
+} else if (mode == 'dark') {
     modeBtn.checked = false;
     document.documentElement.classList.remove("light")
     document.documentElement.classList.add("dark")
-}
-
-if (mode == 'light') {
+} else if (mode == 'light') {
     modeBtn.checked = true;
     document.documentElement.classList.remove("dark")
     document.documentElement.classList.add("light")
-};
+}
+}); 
